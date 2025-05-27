@@ -1,0 +1,104 @@
+/* Centrar todo el contenido del body */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+  background: #fafafa;
+  background-image: url("Rainbow.png");
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+}
+
+/* Contenedor principal para limitar el ancho */
+main, .cabecera, #parrafo1, .pie {
+  width: 100%;              /* El ancho ocupa todo el espacio disponible del contenedor padre */
+  max-width: 600px;         /* El ancho máximo será de 600 píxeles, aunque el 100% sea mayor */
+  box-sizing: border-box;   /* Incluye el padding y el borde dentro del ancho total del elemento */
+  margin: 0 auto;           /* Centra el elemento horizontalmente (margen izquierdo y derecho automáticos) */
+  text-align: left;       /* Alinea el texto y los elementos en línea dentro del contenedor */
+}
+
+h1{color: #ffffff;
+    font-family: "Caudex";
+    font-size: 45px;
+    background-color: #0c0c0c;
+    box-shadow: 0 0 40px 10px #253c57; /* Sombra en los bordes en donde n1=desplazamiento horizontal de la sombra, n2=desplazamiento vertical de la sombra ,n3=desenfoque de la sombra  ,n4=extensión de la sombra y n5=  color de la sombra */
+    background-size: cover; /* Ajusta el fondo para cubrir todo el área */
+    background-repeat: no-repeat; /* La propiedad background-repeat controla si una imagen de fondo se repite (se "tilea") dentro de un elemento (repeat es su valor por defecto)  */
+    background-position: center; /* Centra el fondo */
+    position: fixed; /* Fija el elemento en su posición */
+    top: 0; /* Lo posiciona en la parte superior de la página */
+    left: 0; /* Lo alinea al lado izquierdo */
+    width: 100%; /* Hace que ocupe todo el ancho */
+    text-align: center; /* Centra el texto */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    height: 70px; /* Define una altura fija para el h1 */
+    line-height: 70px; /*  ajustar line-height igual a la altura del <h1> para que el texto se vea centrado verticalmente */
+    margin-top: 0px; /* Elimina el margen superior */
+}
+
+.cabecera {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;     /* Centra verticalmente los elementos */
+  gap: 1rem;               /* Espacio entre los elementos */
+  background-color: #004ab4;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff ;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* Imagenes responsivas */
+img {
+  max-width: 100%;
+  height: 150px;
+  display: block;
+  margin: 1 auto;
+  margin-left: auto;
+}
+
+
+p {
+    background-color: #fafafa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+ul {
+    background-color: #fafafa;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Pie de página */
+.pie {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  main, .cabecera, #parrafo1, .pie {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+}
